@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="scraper.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="scraper.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/lib/lostfilm/scraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.333334">
-              <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.4604651">
+              <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="38" />
               <folding>
                 <element signature="e#25#64#0" expanded="true" />
               </folding>
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scraper.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scraper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lib/support/abstract/scraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6139535">
-              <caret line="50" column="191" selection-start-line="50" selection-start-column="191" selection-end-line="50" selection-end-column="191" />
+            <state vertical-scroll-proportion="-23.333334">
+              <caret line="47" column="95" selection-start-line="47" selection-start-column="95" selection-end-line="47" selection-end-column="95" />
               <folding>
                 <element signature="e#25#64#0" expanded="true" />
               </folding>
@@ -73,8 +73,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/lib/lostfilm/scraper.py" />
         <option value="$PROJECT_DIR$/resources/lib/support/abstract/scraper.py" />
+        <option value="$PROJECT_DIR$/resources/lib/lostfilm/scraper.py" />
       </list>
     </option>
   </component>
@@ -337,20 +337,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lib/lostfilm/scraper.py">
+    <entry file="file://$PROJECT_DIR$/resources/lib/support/abstract/scraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.333334">
-          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        <state vertical-scroll-proportion="-23.333334">
+          <caret line="47" column="95" selection-start-line="47" selection-start-column="95" selection-end-line="47" selection-end-column="95" />
           <folding>
             <element signature="e#25#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lib/support/abstract/scraper.py">
+    <entry file="file://$PROJECT_DIR$/resources/lib/lostfilm/scraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6139535">
-          <caret line="50" column="191" selection-start-line="50" selection-start-column="191" selection-end-line="50" selection-end-column="191" />
+        <state vertical-scroll-proportion="0.4604651">
+          <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="38" />
           <folding>
             <element signature="e#25#64#0" expanded="true" />
           </folding>
