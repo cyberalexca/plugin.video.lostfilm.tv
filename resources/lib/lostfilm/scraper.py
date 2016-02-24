@@ -109,9 +109,9 @@ class LostFilmScraper(AbstractScraper):
 
     def fetch(self, url, params=None, data=None, **request_params):
         self.response = super(LostFilmScraper, self).fetch(url, params, data, **request_params)
-        print("******************************************************************************")
+        # print("******************************************************************************")
         # print(self.response.content)
-        print(self.response.encoding)
+        # print(self.response.encoding)
         encoding = self.response.encoding
         if encoding == 'ISO-8859-1':
             encoding = 'windows-1251'
