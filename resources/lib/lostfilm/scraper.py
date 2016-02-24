@@ -274,6 +274,8 @@ class LostFilmScraper(AbstractScraper):
             body = doc.find('div', {'class': 'content_body'})
             series_titles = body.find('span', {'style': 'font-family:arial;.*?'}).strings
             titles = body.find('span', {'class': 'torrent_title'}).strings
+            print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+            print(titles)
             episode_titles, original_titles = zip(*[parse_title(t) for t in titles])
             release_dates = body.find('b').strings[1::3]
             release_dates = [str_to_date(d, '%d.%m.%Y %H:%M') for d in release_dates]

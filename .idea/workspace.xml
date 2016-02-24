@@ -25,8 +25,8 @@
       <file leaf-file-name="scraper.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/lib/lostfilm/scraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43255815">
-              <caret line="316" column="12" selection-start-line="316" selection-start-column="12" selection-end-line="316" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.4744186">
+              <caret line="276" column="76" selection-start-line="276" selection-start-column="76" selection-end-line="276" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -206,8 +206,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/lib/lostfilm/scraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43255815">
-          <caret line="316" column="12" selection-start-line="316" selection-start-column="12" selection-end-line="316" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.4744186">
+          <caret line="276" column="76" selection-start-line="276" selection-start-column="76" selection-end-line="276" selection-end-column="76" />
           <folding />
         </state>
       </provider>
