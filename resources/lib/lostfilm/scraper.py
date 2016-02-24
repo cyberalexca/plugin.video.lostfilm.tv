@@ -109,6 +109,8 @@ class LostFilmScraper(AbstractScraper):
 
     def fetch(self, url, params=None, data=None, **request_params):
         self.response = super(LostFilmScraper, self).fetch(url, params, data, **request_params)
+        print("******************************************************************************")
+        print(self.response.content)
         encoding = self.response.encoding
         if encoding == 'ISO-8859-1':
             encoding = 'windows-1251'
@@ -270,6 +272,8 @@ class LostFilmScraper(AbstractScraper):
     def browse_episodes(self, skip=0):
         self.ensure_authorized()
         doc = self.fetch(self.BASE_URL + "/browse.php", {'o': skip})
+        print("doc >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+        print(doc)
         with Timer(logger=self.log, name='Parsing episodes list'):
             body = doc.find('div', {'class': 'content_body'})
             print("body >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
