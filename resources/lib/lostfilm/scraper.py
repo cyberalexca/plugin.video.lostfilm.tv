@@ -272,7 +272,11 @@ class LostFilmScraper(AbstractScraper):
         doc = self.fetch(self.BASE_URL + "/browse.php", {'o': skip})
         with Timer(logger=self.log, name='Parsing episodes list'):
             body = doc.find('div', {'class': 'content_body'})
+            print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+            print(body)
             series_titles = body.find('span', {'style': 'font-family:arial;.*?'}).strings
+            print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+            print(series_titles)
             titles = body.find('span', {'class': 'torrent_title'}).strings
             print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
             print(titles)
@@ -316,6 +320,7 @@ class LostFilmScraper(AbstractScraper):
 
 
 def parse_title(t):
+    print("==========================================================")
     print(t)
     title, original_title = re.findall('^(.*?)\s*(?:\((.*)\)\.?)?$', t)[0]
     return title, original_title
