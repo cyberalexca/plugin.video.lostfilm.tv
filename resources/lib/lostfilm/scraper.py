@@ -114,7 +114,8 @@ class LostFilmScraper(AbstractScraper):
         encoding = self.response.encoding
         if encoding == 'ISO-8859-1':
             encoding = 'windows-1251'
-        return HtmlDocument.from_string(self.response.content, encoding)
+        # return HtmlDocument.from_string(self.response.content, encoding)
+        return self.response.content
 
     def authorize(self):
         with Timer(logger=self.log, name='Authorization'):
