@@ -109,14 +109,10 @@ class LostFilmScraper(AbstractScraper):
 
     def fetch(self, url, params=None, data=None, **request_params):
         self.response = super(LostFilmScraper, self).fetch(url, params, data, **request_params)
-        # print("******************************************************************************")
-        # print(self.response.content)
-        # print(self.response.encoding)
         encoding = self.response.encoding
         if encoding == 'ISO-8859-1':
             encoding = 'windows-1251'
         return HtmlDocument.from_string(self.response.content, encoding)
-        # return HtmlDocument.from_string(self.response.content)
 
     def authorize(self):
         with Timer(logger=self.log, name='Authorization'):
@@ -274,18 +270,10 @@ class LostFilmScraper(AbstractScraper):
     def browse_episodes(self, skip=0):
         self.ensure_authorized()
         doc = self.fetch(self.BASE_URL + "/browse.php", {'o': skip})
-        print("doc >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-        print(doc)
         with Timer(logger=self.log, name='Parsing episodes list'):
             body = doc.find('div', {'class': 'content_body'})
-            print("body >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-            print(body)
             series_titles = body.find('span', {'style': 'font-family:arial;.*?'}).strings
-            print("series_titles >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-            print(series_titles)
             titles = body.find('span', {'class': 'torrent_title'}).strings
-            print("titles >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-            print(titles)
             episode_titles, original_titles = zip(*[parse_title(t) for t in titles])
             release_dates = body.find('b').strings[1::3]
             release_dates = [str_to_date(d, '%d.%m.%Y %H:%M') for d in release_dates]
@@ -326,8 +314,6 @@ class LostFilmScraper(AbstractScraper):
 
 
 def parse_title(t):
-    print("==========================================================")
-    print(t)
     title, original_title = re.findall('^(.*?)\s*(?:\((.*)\)\.?)?$', t)[0]
     return title, original_title
 

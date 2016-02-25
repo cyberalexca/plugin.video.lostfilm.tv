@@ -47,11 +47,9 @@ class AbstractScraper(object):
         try:
             with Timer(logger=self.log, name='Fetching URL %s with params %r' % (url, params)):
                 response = self.session.request('post' if data else 'get',
-                                                url, params=params, data=data, allow_redirects=False,
+                                                url, params=params, data=data,
                                                 headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/601.4.4 (KHTML, like Gecko) Version/9.0.3 Safari/601.4.4'},
                                                 **request_params)
-                print("--------------------------------------------------------------------------------------")
-                print(response.status_code)
                 response.raise_for_status()
                 self.save_cookies()
                 return response
