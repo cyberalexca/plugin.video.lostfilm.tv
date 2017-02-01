@@ -199,7 +199,7 @@ class LostFilmScraper(AbstractScraper):
                 episode_title, orig_title = parse_title(title_td.text)
                 onclick = title_td.attr('onClick')
                 release_date = ep.find('span', {'class': 'micro'}).find('span')[0].text
-                release_date = str_to_date(release_date, '%d.%m.%Y %H:%M') if release_date else None
+                release_date = str_to_date(release_date, '%d.%m.%Y') if release_date else None
                 _, season_number, episode_number = parse_onclick(onclick)
                 poster = poster_url(original_title, season_number)
                 if not series_poster:
